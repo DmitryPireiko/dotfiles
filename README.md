@@ -9,8 +9,9 @@
 | App launcher | Rofi                   |
 | Bar          | Polybar                |
 | Font         | Ubuntu Mono            |
-| Iconic font  | Kora Grey              |
-| Colorscheme  | Flat Remix Grey Dark   |
+| Iconic font  | Awesome                |
+| Icons        | Kora Gray              |
+| Theme        | Flat Remix Grey Dark   |
 
 
 ## Screenshot
