@@ -6,7 +6,7 @@
 #	dmenu_run -fn 'JetBrainsMono-11' -nb '#23252e' -nf '#f9f8fe' -sb '#f9f8fe' -sf '#23252e'
 
 super + d
-	rofi -combi-modi drun -theme rounded-gray-dark -font 'JetBrainsMono-11' -show drun
+	rofi -combi-modi drun -theme rounded-gray-dark -font 'JetBrainsMono-11' -show drun -icon-theme 'Papirus-Dark' -show-icons
 
 super + {_,shift + }Return
 	{kitty, bspc node -s biggest.local}
@@ -24,7 +24,7 @@ super + F4
         firefox
 
 super + x
-	xsecurelock
+        $HOME/.config/rofi/scripts/powermenu
 
 
 

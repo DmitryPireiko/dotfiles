@@ -10,7 +10,7 @@
 | Bar          | Polybar                |
 | Font         | Ubuntu Mono            |
 | Iconic font  | Awesome                |
-| Icons        | Kora Gray              |
+| Icons        | Papirus Dark           |
 | Theme        | Flat Remix Grey Dark   |
 
 
