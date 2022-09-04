@@ -45,6 +45,7 @@ listview {
 element-text {
     font:                   "Awesome 44";
     background-color:       @background-light;
+    text-color:             @selected;
 }
 element-text selected {
     background-color:       @selected;
