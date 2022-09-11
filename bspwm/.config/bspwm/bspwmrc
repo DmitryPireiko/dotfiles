@@ -12,6 +12,7 @@ nm-applet &
 syndaemon -i 1 -t -K -R -d
 flameshot &
 easyeffects --gapplication-service &
+sh ~/.fehbg &
 #conky &
 #firefox &
 #telegram-desktop &
