@@ -14,6 +14,9 @@ main() {
 			echo "follow=off desktop=^6"
 			;;
 		Spotify)
+			echo "follow=off desktop=^3"
+			;;
+		Element)
 			echo "state=floating follow=off rectangle=1150x930+680+90 desktop=^2"
 			;;
 		"")

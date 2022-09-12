@@ -19,7 +19,7 @@ sh ~/.fehbg &
 #steam &
 
 #ВОРКСПЕЙСЫ
-bspc monitor -d               
+bspc monitor -d               
 
 #РАМКИ И ГАПСЫ
 bspc config border_width         1

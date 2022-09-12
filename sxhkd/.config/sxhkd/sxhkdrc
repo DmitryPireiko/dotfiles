@@ -14,6 +14,9 @@ super + {_,shift + }Return
 Print
 	flameshot gui
 
+super + F1
+        element-desktop
+
 super + F2
         telegram-desktop
 
