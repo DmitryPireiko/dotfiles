@@ -5,6 +5,7 @@ Plug 'ycm-core/YouCompleteMe'
 "Colorschemes
 Plug 'morhetz/gruvbox'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 
