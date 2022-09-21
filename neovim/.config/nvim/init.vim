@@ -2,10 +2,12 @@ call plug#begin()
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'ycm-core/YouCompleteMe'
+Plug 'mattn/emmet-vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'kien/ctrlp.vim'
 "Colorschemes
 Plug 'morhetz/gruvbox'
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'mattn/emmet-vim'
 
 call plug#end()
 
