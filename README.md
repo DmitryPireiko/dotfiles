@@ -16,7 +16,7 @@
 
 ## Screenshot
 
-<img src="https://github.com/sadnessITS/files/blob/master/dotfiles/screenshots/1.jpg">
+<img src="https://github.com/sadnessITS/files/blob/master/dotfiles/screenshots/bspwm_1.jpg">
 
 ## Внимание
 
