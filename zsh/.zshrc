@@ -98,3 +98,4 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 alias scss='sass --watch \#source/scss:css'
+alias v='nvim'

@@ -3,20 +3,19 @@
 |              |                        |
 |--------------|------------------------|
 | OS           | Archlinux              |
-| WM           | bspwm                  |
+| WM           | dwm                    |
 | Terminal     | Kitty                  |
 | File manager | Ranger                 |
-| App launcher | Rofi                   |
-| Bar          | Polybar                |
+| App launcher | dmenu                  |
 | Font         | Ubuntu Mono            |
 | Iconic font  | Awesome                |
-| Icons        | Papirus Dark           |
-| Theme        | Flat Remix Grey Dark   |
+| Icons        | Breeze                 |
+| Theme        | Flat Remix Yellow Dark |
 
 
 ## Screenshot
 
-<img src="https://github.com/sadnessITS/files/blob/master/dotfiles/screenshots/1.jpg">
+<img src="https://github.com/sadnessITS/files/blob/master/dotfiles/screenshots/dwm_1.jpg">
 
 ## Внимание
 
