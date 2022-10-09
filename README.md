@@ -15,7 +15,7 @@
 
 ## Screenshot
 
-<img src="https://github.com/sadnessITS/files/blob/master/dotfiles/screenshots/dwm_1.jpg">
+<img src="https://github.com/sadnessITS/files/blob/master/dotfiles/screenshots/dwm_1.png">
 
 ## Внимание
 
