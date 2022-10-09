@@ -1,14 +1,8 @@
-#!/usr/bin/bash
+#!/usr/bin/zsh
  
 layout(){
-    t=$(xset -q | grep LED)
-    code=${t##*mask:  }
-    if [[ $code -eq "00000002" ]]; then
-            result="⌨   US"
-    else
-            result="⌨   RU"
-    fi
-    echo $result
+    current_layout=$(xkb-switch)
+    echo "⌨  $current_layout"
 }
 
 getbattery () {
