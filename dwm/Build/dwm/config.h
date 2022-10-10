@@ -63,10 +63,10 @@ static const char *termcmd[]  = { "kitty", NULL };
 
 static const char *flameshot[] = { "/usr/bin/flameshot", "gui", NULL };
 
-static const char *volraise[] = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%", NULL };
-static const char *vollower[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%", NULL };
-static const char *audiomute[] = { "/usr/bin/pactl", "set-sink-mute", "0", "toggle", NULL };
-static const char *micmute[] = { "/usr/bin/pactl", "set-source-mute", "0", "toggle", NULL };
+static const char *volraise[] = { "/usr/bin/pamixer", "-i", "5", NULL };
+static const char *vollower[] = { "/usr/bin/pamixer", "-d", "5", NULL };
+static const char *audiomute[] = { "/usr/bin/pamixer", "-t", NULL };
+static const char *micmute[] = { "/usr/bin/pamixer", "--source", "easyeffects_source", "-t", NULL };
 
 static const char *lighta[] = { "/usr/bin/light", "-A", "5", NULL };
 static const char *lightu[] = { "/usr/bin/light", "-U", "5", NULL };

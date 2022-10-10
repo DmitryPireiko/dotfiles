@@ -28,22 +28,16 @@ getlight(){
 
 
 volume(){
-    full_str=$(pactl list sinks | grep '^[[:space:]]Volume:' | head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,' )
-    state=${full_str##*\[}
-    if [[ $state == "off]" ]]; then
-            echo off
-    else
-            state=${full_str#*\[}
-            echo "🔈 " ${state%%\]*}
-    fi
+    current_vol=$(pamixer --get-volume-human)
+    echo "🔈  $current_vol"
 }
  
 generate_content(){
-    echo "   $(getlight)  |  $(volume)%  |  $(layout)  |  $(getbattery)  |  $(fdate)   "
+    echo "   $(getlight)  |  $(volume)  |  $(layout)  |  $(getbattery)  |  $(fdate)   "
 }
  
 
 while true; do
     xsetroot -name "$(generate_content)"
-    sleep .5s
+    sleep .1s
 done
