@@ -62,6 +62,10 @@ static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray
 static const char *termcmd[]  = { "kitty", NULL };
 
 static const char *flameshot[] = { "/usr/bin/flameshot", "gui", NULL };
+static const char *blueman[] = { "/usr/bin/blueman-manager", NULL };
+static const char *telegram[] = { "/usr/bin/telegram-desktop", NULL };
+static const char *spotify[] = { "/usr/bin/spotify", NULL };
+static const char *firefox[] = { "/usr/bin/firefox", NULL };
 
 static const char *volraise[] = { "/usr/bin/pamixer", "-i", "5", NULL };
 static const char *vollower[] = { "/usr/bin/pamixer", "-d", "5", NULL };
@@ -115,6 +119,10 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 
 	{ 0,                            XK_Print,  spawn,          {.v = flameshot } },
+	{ MODKEY,                       XK_F1,     spawn,          {.v = blueman } },
+	{ MODKEY,                       XK_F2,     spawn,          {.v = telegram } },
+	{ MODKEY,                       XK_F3,     spawn,          {.v = spotify } },
+	{ MODKEY,                       XK_F4,     spawn,          {.v = firefox } },
 
 	{ 0,                            XF86XK_AudioRaiseVolume,      spawn,          {.v = volraise } },
 	{ 0,                            XF86XK_AudioLowerVolume,      spawn,          {.v = vollower } },
