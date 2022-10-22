@@ -1,5 +1,6 @@
 $HOME/.fehbg &
 picom &
+xmousepasteblock &
 flameshot &
 blueman-applet &
 $HOME/Build/dwm/sbar.sh &
