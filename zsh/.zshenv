@@ -2,3 +2,4 @@
 
 export EDITOR='nvim'
 export LD_LIBRARY_PATH=/usr/local/lib
+. "$HOME/.cargo/env"

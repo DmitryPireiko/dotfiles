@@ -13,7 +13,7 @@ static const char col_gray1[]       = "#080802";
 static const char col_gray2[]       = "#f9f8fe";
 static const char col_gray3[]       = "#f9f8fe";
 static const char col_gray4[]       = "#090902";
-static const char col_cyan[]        = "#ffd86e";
+static const char col_cyan[]        = "#ffffff";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -28,9 +28,13 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	/* class                  instance    title       tags mask     isfloating    monitor */
+	{ "TelegramDesktop",      NULL,       NULL,       1 << 1,       1,           -1 },
+	{ "Spotify",              NULL,       NULL,       1 << 1,       1,           -1 },
+	{ "firefox",              NULL,       NULL,       1 << 3,       0,           -1 },
+	{ "mpv",                  NULL,       NULL,       0,            1,           -1 },
+	{ "feh",                  NULL,       NULL,       0,            1,           -1 },
+	{ "Blueman-manager",      NULL,       NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
