@@ -1,16 +1,16 @@
 # Dot Files
 
-|              |                        |
-|--------------|------------------------|
-| OS           | Archlinux              |
-| WM           | dwm                    |
-| Terminal     | Kitty                  |
-| File manager | Ranger                 |
-| App launcher | dmenu                  |
-| Font         | Ubuntu Mono            |
-| Iconic font  | Awesome                |
-| Icons        | Breeze                 |
-| Theme        | Flat Remix Yellow Dark |
+|              |                         |
+|--------------|-------------------------|
+| OS           | Archlinux               |
+| WM           | dwm                     |
+| Terminal     | Kitty                   |
+| File manager | Ranger                  |
+| App launcher | dmenu                   |
+| Font         | Ubuntu Mono             |
+| Iconic font  | Awesome                 |
+| Icons        | Tela Circle Icon Theme  |
+| Theme        | Graphite GTK Theme      |
 
 
 ## Screenshot
