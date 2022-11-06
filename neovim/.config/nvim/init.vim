@@ -5,8 +5,8 @@ Plug 'ycm-core/YouCompleteMe'
 Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'kien/ctrlp.vim'
+Plug 'vim-airline/vim-airline'
 "Colorschemes
-Plug 'morhetz/gruvbox'
 Plug 'NLKNguyen/papercolor-theme'
 
 call plug#end()
@@ -25,10 +25,14 @@ noremap <C-h> <C-w>h
 "map <Leader> <Plug>(easymotion-prefix)
 
 "Color Theme
-"colorscheme gruvbox
-set background=dark
-"let g:gruvbox_contrast_dark = 'hard'
 colorscheme PaperColor
+
+"Airline
+let g:airline_powerline_fonts = 1 
+let g:airline#extensions#keymap#enabled = 0 
+let g:airline_section_z = "\ue0a1:%l/%L Col:%c"
+let g:Powerline_symbols='unicode' 
+let g:airline#extensions#xkblayout#enabled = 0 
 
 "Tabulations
 set expandtab
