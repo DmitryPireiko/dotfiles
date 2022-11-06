@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# все файлы в подпапках
+# files in subfolders
 mapfile -t files < <(find ./*/ -type f)
 
 for file in "${files[@]#*/}"; do
-    # создание папок в домашнем каталоге
+    # creating folders in the home directory
     mkdir -p "$HOME/$(dirname "${file#*/}")"
 
-    # создание ссылки с перезаписью существующего файла
+    # creating links with overwrites
     ln -sf "$PWD/$file" "$HOME/${file#*/}"
 done
