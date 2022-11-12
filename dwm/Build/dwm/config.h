@@ -70,6 +70,7 @@ static const char *blueman[] = { "/usr/bin/blueman-manager", NULL };
 static const char *telegram[] = { "/usr/bin/telegram-desktop", NULL };
 static const char *spotify[] = { "/usr/bin/spotify", NULL };
 static const char *firefox[] = { "/usr/bin/firefox", NULL };
+static const char *xsecurelock[] = { "/usr/bin/xsecurelock", NULL };
 
 static const char *volraise[] = { "/usr/bin/pamixer", "-i", "5", NULL };
 static const char *vollower[] = { "/usr/bin/pamixer", "-d", "5", NULL };
@@ -123,6 +124,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 
 	{ 0,                            XK_Print,  spawn,          {.v = flameshot } },
+	{ MODKEY,                       XK_x,      spawn,          {.v = xsecurelock } },
 	{ MODKEY,                       XK_F1,     spawn,          {.v = blueman } },
 	{ MODKEY,                       XK_F2,     spawn,          {.v = telegram } },
 	{ MODKEY,                       XK_F3,     spawn,          {.v = spotify } },
