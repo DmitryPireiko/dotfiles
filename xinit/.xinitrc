@@ -1,5 +1,5 @@
 $HOME/.fehbg &
-picom &
+picom --animations --animation-for-open-window zoom --animation-stiffness 300 &
 xmousepasteblock &
 flameshot &
 blueman-applet &
