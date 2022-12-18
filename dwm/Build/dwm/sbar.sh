@@ -1,11 +1,11 @@
 #!/usr/bin/zsh
  
-layout(){
+layout() {
     current_layout=$(xkb-switch)
     echo "⌨  $current_layout"
 }
 
-getbattery () {
+getbattery() {
     CHARGE=$(cat /sys/class/power_supply/BAT0/capacity)
     STATUS=$(cat /sys/class/power_supply/BAT0/status)
 
@@ -16,22 +16,22 @@ getbattery () {
     fi
 }
 
-fdate(){
+fdate() {
     date +"%r"
 }
 
-getlight(){
+getlight() {
     light_value=$(light -G)
     out_value=${light_value/\.*/}
     echo "☀ " $out_value"%"
 }
 
 
-volume(){
+volume() {
     current_vol=$(pamixer --get-volume-human)
     echo "🔈  $current_vol"
 }
- 
+
 generate_content(){
     echo "   $(getlight)  |  $(volume)  |  $(layout)  |  $(getbattery)  |  $(fdate)   "
 }
