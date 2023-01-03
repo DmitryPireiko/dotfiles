@@ -17,7 +17,7 @@ getbattery() {
 }
 
 fdate() {
-    date +"%r"
+    date +"%I:%M %p"
 }
 
 getlight() {
