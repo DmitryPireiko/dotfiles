@@ -21,20 +21,21 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "", "", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class                  instance    title       tags mask     isfloating    monitor */
-	{ "TelegramDesktop",      NULL,       NULL,       1 << 1,       1,           -1 },
-	{ "Spotify",              NULL,       NULL,       1 << 1,       1,           -1 },
-	{ "firefox",              NULL,       NULL,       1 << 3,       0,           -1 },
-	{ "mpv",                  NULL,       NULL,       0,            1,           -1 },
-	{ "feh",                  NULL,       NULL,       0,            1,           -1 },
-	{ "Blueman-manager",      NULL,       NULL,       0,            1,           -1 },
+	/* class                  instance    title       tags mask     iscentered   isfloating   monitor */
+	{ "Steam",                NULL,       NULL,       1 << 8,       1,            1,          -1 },
+	{ "firefox",              NULL,       NULL,       1 << 7,       1,            0,          -1 },
+	{ "Spotify",              NULL,       NULL,       1 << 6,       1,            1,          -1 },
+	{ "TelegramDesktop",      NULL,       NULL,       1 << 5,       1,            1,          -1 },
+	{ "Thunar",               NULL,       NULL,       0,            1,            1,          -1 },
+	{ "mpv",                  NULL,       NULL,       0,            1,            1,          -1 },
+	{ "feh",                  NULL,       NULL,       0,            1,            1,          -1 },
 };
 
 /* layout(s) */
@@ -62,6 +63,7 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
+static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "kitty", NULL };
 
@@ -77,8 +79,8 @@ static const char *vollower[] = { "/usr/bin/pamixer", "-d", "5", NULL };
 static const char *audiomute[] = { "/usr/bin/pamixer", "-t", NULL };
 static const char *micmute[] = { "/usr/bin/pamixer", "--source", "easyeffects_source", "-t", NULL };
 
-static const char *lighta[] = { "/usr/bin/light", "-A", "5", NULL };
-static const char *lightu[] = { "/usr/bin/light", "-U", "5", NULL };
+static const char *lighta[] = { "/usr/bin/light", "-A", "5.0", NULL };
+static const char *lightu[] = { "/usr/bin/light", "-U", "5.0", NULL };
 
 static const char *playerplay[] = { "/usr/bin/playerctl", "play-pause", NULL };
 static const char *playernext[] = { "/usr/bin/playerctl", "next", NULL };
@@ -117,10 +119,10 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_3,                      2)
 	TAGKEYS(                        XK_4,                      3)
 	TAGKEYS(                        XK_5,                      4)
-	TAGKEYS(                        XK_6,                      5)
-	TAGKEYS(                        XK_7,                      6)
-	TAGKEYS(                        XK_8,                      7)
-	TAGKEYS(                        XK_9,                      8)
+	TAGKEYS(                        XK_w,                      5)
+	TAGKEYS(                        XK_e,                      6)
+	TAGKEYS(                        XK_r,                      7)
+	TAGKEYS(                        XK_s,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 
 	{ 0,                            XK_Print,  spawn,          {.v = flameshot } },

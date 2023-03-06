@@ -36,6 +36,21 @@ let g:airline_section_z = "\ue0a1:%l/%L Col:%c"
 let g:Powerline_symbols='unicode' 
 let g:airline#extensions#xkblayout#enabled = 0 
 
+"Clipboard
+set clipboard+=unnamedplus
+
+"Copy to clipboard
+vnoremap  <leader>y  "+y
+nnoremap  <leader>Y  "+yg_
+nnoremap  <leader>y  "+y
+nnoremap  <leader>yy  "+yy
+
+"Paste from clipboard
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P
+
 "Tabulations
 set expandtab
 set smarttab
