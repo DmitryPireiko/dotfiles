@@ -33,7 +33,7 @@ static const Rule rules[] = {
 	{ "firefox",              NULL,       NULL,       1 << 7,       1,            0,          -1 },
 	{ "Spotify",              NULL,       NULL,       1 << 6,       1,            1,          -1 },
 	{ "TelegramDesktop",      NULL,       NULL,       1 << 5,       1,            1,          -1 },
-	{ "Thunar",               NULL,       NULL,       0,            1,            1,          -1 },
+	{ "Doublecmd",            NULL,       NULL,       0,            1,            1,          -1 },
 	{ "mpv",                  NULL,       NULL,       0,            1,            1,          -1 },
 	{ "feh",                  NULL,       NULL,       0,            1,            1,          -1 },
 };
@@ -67,10 +67,9 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "kitty", NULL };
 
+static const char *doublecmd[] = { "/usr/bin/doublecmd", NULL };
 static const char *flameshot[] = { "/usr/bin/flameshot", "gui", NULL };
-static const char *blueman[] = { "/usr/bin/blueman-manager", NULL };
 static const char *telegram[] = { "/usr/bin/telegram-desktop", NULL };
-static const char *spotify[] = { "/usr/bin/spotify", NULL };
 static const char *firefox[] = { "/usr/bin/firefox", NULL };
 static const char *xsecurelock[] = { "/usr/bin/xsecurelock", NULL };
 
@@ -127,9 +126,8 @@ static const Key keys[] = {
 
 	{ 0,                            XK_Print,  spawn,          {.v = flameshot } },
 	{ MODKEY,                       XK_x,      spawn,          {.v = xsecurelock } },
-	{ MODKEY,                       XK_F1,     spawn,          {.v = blueman } },
+	{ MODKEY,                       XK_F1,     spawn,          {.v = doublecmd } },
 	{ MODKEY,                       XK_F2,     spawn,          {.v = telegram } },
-	{ MODKEY,                       XK_F3,     spawn,          {.v = spotify } },
 	{ MODKEY,                       XK_F4,     spawn,          {.v = firefox } },
 
 	{ 0,                            XF86XK_AudioRaiseVolume,      spawn,          {.v = volraise } },
