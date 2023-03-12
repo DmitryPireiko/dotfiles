@@ -2,8 +2,8 @@ $HOME/.fehbg &
 picom &
 xmousepasteblock &
 flameshot &
-$HOME/Repo/dwm/sbar.sh &
+$HOME/Build/dwm/sbar.sh &
 easyeffects --gapplication-service &
-light -S 80
+light -S 90
 
 exec dwm
