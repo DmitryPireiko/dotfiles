@@ -1,11 +1,11 @@
 #!/usr/bin/zsh
  
-layout() {
+getLayout() {
     current_layout=$(xkb-switch)
     echo "⌨  $current_layout"
 }
 
-getbattery() {
+getBattery() {
     CHARGE=$(cat /sys/class/power_supply/BAT0/capacity)
     STATUS=$(cat /sys/class/power_supply/BAT0/status)
 
@@ -16,28 +16,32 @@ getbattery() {
     fi
 }
 
-fdate() {
-    date +"%I:%M %p"
+getDate() {
+    date +"  %I:%M %p"
 }
 
-getlight() {
+getLight() {
     light_value=$(light -G)
     out_value=${light_value/\.*/}
     echo "☀ " $out_value"%"
 }
 
-
-volume() {
-    current_vol=$(pamixer --get-volume-human)
-    echo "🔈  $current_vol"
+getCpuTemperature() {
+    current_temperature=$(cat /sys/class/thermal/thermal_zone1/temp | column -s $'\t' -t | sed 's/\(.\)..$/ \°C/')
+    #current_temperature=$(sensors | sed -n '15p' | cut -c17-23)
+    echo "  $current_temperature "
 }
 
-generate_content(){
-    echo "   $(getlight)  |  $(volume)  |  $(layout)  |  $(getbattery)  |  $(fdate)   "
+getVolume() {
+    current_volume=$(pamixer --get-volume-human)
+    echo "🔈  $current_volume"
+}
+
+generateContent(){
+    echo "   $(getLight)  |  $(getVolume)  |  $(getLayout)  |  $(getBattery)  |  $(getCpuTemperature)  |  $(getDate)   "
 }
  
-
 while true; do
-    xsetroot -name "$(generate_content)"
+    xsetroot -name "$(generateContent)"
     sleep .1s
 done

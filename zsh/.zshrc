@@ -16,3 +16,6 @@ source $ZSH/oh-my-zsh.sh
 alias scss='sass --watch \#source/scss:css'
 alias v='nvim'
 alias rg='ranger'
+alias po='poweroff'
+alias re='reboot'
+alias ss='systemctl suspend'
