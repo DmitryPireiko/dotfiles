@@ -6,5 +6,8 @@ export EDITOR='nvim'
 export LD_LIBRARY_PATH=/usr/local/lib
 export JAVA_HOME=/usr/lib/jvm/java-19-openjdk
 
+# .local/bin to PATH
+[[ "$PATH" == *"$HOME/.local/bin"* ]] || PATH="$HOME/.local/bin:$PATH"
+
 # Rust
 . "$HOME/.cargo/env"
