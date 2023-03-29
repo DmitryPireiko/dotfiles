@@ -1,3 +1,5 @@
+#!/bin/sh
+
 $HOME/.fehbg &
 picom &
 xmousepasteblock &
