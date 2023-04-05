@@ -3,19 +3,20 @@
 |              | Description                 |
 |--------------|---------------------------- |
 | OS           | Archlinux                   |
-| WM           | dwm                         |
-| Terminal     | Kitty                       |
-| File manager | Ranger                      |
-| App launcher | dmenu                       |
-| Font         | Ubuntu Mono                 |
+| DE           | Hyprland                    |
+| WM           | sway                        |
+| Terminal     | kitty                       |
+| File manager | ranger                      |
+| App launcher | wofi                        |
+| Font         | Ubuntu                      |
 | Iconic font  | Awesome                     |
-| Icons        | Breeze Dark                 |
-| Theme        | Flat Remix GTK Grey Darkest |
+| Icons        | Papirus-Dark                |
+| Theme        | Flat Remix GTK Red  Darkest |
 
 
 ## Screenshot
 
-<img src="https://github.com/sadnessITS/files/blob/master/dotfiles/screenshots/dwm_1.png">
+<img src="https://github.com/sadnessITS/files/blob/master/dotfiles/screenshots/sway_1.png">
 
 ## WARNING!!!
 
