@@ -7,6 +7,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rust-lang/rust.vim'
+Plug 'mhartington/formatter.nvim'
 "Colorschemes
 Plug 'NLKNguyen/papercolor-theme'
 
@@ -35,6 +36,9 @@ let g:airline#extensions#keymap#enabled = 0
 let g:airline_section_z = "\ue0a1:%l/%L Col:%c"
 let g:Powerline_symbols='unicode' 
 let g:airline#extensions#xkblayout#enabled = 0 
+
+"autopep8
+au FileType python setlocal formatprg=autopep8\ -
 
 "Clipboard
 set clipboard+=unnamedplus

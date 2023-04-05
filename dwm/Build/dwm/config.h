@@ -21,8 +21,9 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "", "", "", "" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "", "", "" };
 
+static const char tl[] = "ru-turikhay-tlauncher-bootstrap-Bootstrap"; 
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
@@ -31,11 +32,12 @@ static const Rule rules[] = {
 	/* class                  instance    title       tags mask     iscentered   isfloating   monitor */
 	{ "Steam",                NULL,       NULL,       1 << 8,       1,            1,          -1 },
 	{ "firefox",              NULL,       NULL,       1 << 7,       1,            0,          -1 },
-	{ "Spotify",              NULL,       NULL,       1 << 6,       1,            1,          -1 },
-	{ "TelegramDesktop",      NULL,       NULL,       1 << 5,       1,            1,          -1 },
+	{ "Element",              NULL,       NULL,       1 << 6,       1,            1,          -1 },
+	{ "TelegramDesktop",      NULL,       NULL,       1 << 6,       1,            1,          -1 },
 	{ "Doublecmd",            NULL,       NULL,       0,            1,            1,          -1 },
 	{ "mpv",                  NULL,       NULL,       0,            1,            1,          -1 },
 	{ "feh",                  NULL,       NULL,       0,            1,            1,          -1 },
+	{ tl,                     NULL,       NULL,       0,            1,            1,          -1 },
 };
 
 /* layout(s) */
@@ -69,6 +71,7 @@ static const char *termcmd[]  = { "kitty", NULL };
 
 static const char *flameshot[] = { "/usr/bin/flameshot", "gui", NULL };
 static const char *telegram[] = { "/usr/bin/telegram-desktop", NULL };
+static const char *element[] = { "/usr/bin/element-desktop", NULL };
 static const char *firefox[] = { "/usr/bin/firefox", NULL };
 static const char *xsecurelock[] = { "/usr/bin/xsecurelock", NULL };
 
@@ -117,8 +120,8 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_3,                      2)
 	TAGKEYS(                        XK_4,                      3)
 	TAGKEYS(                        XK_5,                      4)
-	TAGKEYS(                        XK_w,                      5)
-	TAGKEYS(                        XK_e,                      6)
+	TAGKEYS(                        XK_6,                      5)
+	TAGKEYS(                        XK_w,                      6)
 	TAGKEYS(                        XK_r,                      7)
 	TAGKEYS(                        XK_s,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
@@ -126,6 +129,7 @@ static const Key keys[] = {
 	{ 0,                            XK_Print,  spawn,          {.v = flameshot } },
 	{ MODKEY,                       XK_x,      spawn,          {.v = xsecurelock } },
 	{ MODKEY,                       XK_F2,     spawn,          {.v = telegram } },
+	{ MODKEY,                       XK_F3,     spawn,          {.v = element } },
 	{ MODKEY,                       XK_F4,     spawn,          {.v = firefox } },
 
 	{ 0,                            XF86XK_AudioRaiseVolume,      spawn,          {.v = volraise } },
