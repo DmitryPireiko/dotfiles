@@ -9,12 +9,17 @@
     "battery"
   ],
   "modules-center": ["custom/playerctl"],
-  "modules-right": ["tray", "pulseaudio", "backlight", "clock"],
+  "modules-right": ["tray", "pulseaudio", "backlight", "custom/layout", "clock"],
   // Modules configuration
   "custom/arch-pill": {
     "format": "",
     "on-click": "~/.config/rofi/scripts/launcher",
     "tooltip": false
+  },
+  "custom/layout": {
+      "exec": "$HOME/.config/waybar/scripts/layout.sh",
+      "interval": 1,
+      "format": "<span foreground='#FFC0CB'> </span> {}"
   },
   "clock": {
     "format": "<span foreground='#cba6f7'>  </span><span>{:%I:%M %p %a %d}</span>",
