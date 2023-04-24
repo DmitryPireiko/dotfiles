@@ -9,14 +9,24 @@
     "battery"
   ],
   "modules-center": ["custom/playerctl"],
-  "modules-right": ["tray", "pulseaudio", "backlight", "custom/layout", "clock"],
+  //"modules-center": ["hyprland/window"],
+  "modules-right": ["tray", "pulseaudio", "backlight", "custom/language", "clock"],
   // Modules configuration
   "custom/arch-pill": {
     "format": "",
     "on-click": "~/.config/rofi/scripts/launcher",
     "tooltip": false
   },
-  "custom/layout": {
+  "hyprland/window": {
+    "format": "👉 {}",
+    "separate-outputs": true
+  },
+  "hyprland/language": {
+    "format-en": "en",
+    "format-ru": "ru",
+    "format": "  {}"
+  },
+  "custom/language": {
       "exec": "$HOME/.config/waybar/scripts/layout.sh",
       "interval": 1,
       "format": "<span foreground='#FFC0CB'> </span> {}"
@@ -66,7 +76,7 @@
   "pulseaudio": {
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "format": "<span size='13000' foreground='#fab387'></span>  {volume}%",
-    "format-muted": "<span size='13000' foreground='#fab387'></span>",
+    "format-muted": "<span size='13000' foreground='#ff4c5b'></span>",
     "format-icons": {
       "headphone": "",
       "hands-free": "",

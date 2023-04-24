@@ -1,0 +1,173 @@
+###########################################
+####      wm independent hotkeys       ####
+###########################################
+
+super + x
+    $HOME/.config/rofi/powermenu/type-2/powermenu.sh
+
+super + d
+	$HOME/.config/rofi/launchers/type-2/launcher.sh
+
+super + {_,shift + }Return
+	{kitty, bspc node -s biggest.local}
+
+Print
+	flameshot gui
+
+super + F1
+        steam
+
+super + F2
+        telegram-desktop
+
+super + F3
+        element-desktop
+
+super + F4
+        firefox
+
+###########################################
+####          bspwm hotkeys            ####
+###########################################
+
+# close or kill window
+super + {_, shift + }c
+	bspc node -{c}
+
+# sxhkd reload
+super + e
+        pkill -USR1 -x sxhkd
+
+# quit or reload bspwm
+super + shift + {q,e}
+        bspc {quit,wm -r}
+
+# on/off monocle mode
+super + m
+	bspc desktop -l next
+
+# swap selected & biggest window
+super + g
+	bspc node -s biggest.window
+
+
+
+###########################################
+####            state/flags            ####
+###########################################
+
+# change window mode
+super + {t,shift + t,a,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# set node flag
+super + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
+
+
+###########################################
+####            focus/swap             ####
+###########################################
+
+# move window
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# select window group
+super + {p,b,comma,period}
+	bspc node -f @{parent,brother,first,second}
+
+# select window
+super + {_,shift + }q
+	bspc node -f {next,prev}.local.!hidden.window
+
+# select workspace
+super + bracket{left,right}
+	bspc desktop -f {prev,next}.local
+
+# select previous workspace
+super + {grave,Tab}
+	bspc {node,desktop} -f last
+
+# focus the older or newer node in the focus history
+super + {o,i}
+	bspc wm -h off; \
+	bspc node {older,newer} -f; \
+	bspc wm -h on
+
+# select workspace / move window to workspace
+super + {_,shift + }{1-8}
+	bspc {desktop -f,node -d} '^{1-7}'
+super + {_,shift + }{w}
+	bspc {desktop -f,node -d} '^{8}'
+super + {_,shift + }{r}
+	bspc {desktop -f,node -d} '^{9}'
+super + {_,shift + }{s}
+	bspc {desktop -f,node -d} '^{10}'
+
+
+
+###########################################
+####            preselect              ####
+###########################################
+
+# preselect the direction of window
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# preselect the ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused node
+super + ctrl + space
+	bspc node -p cancel
+
+# cancel the preselection for the focused desktop
+super + ctrl + shift + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+
+
+###########################################
+####            move/resize            ####
+###########################################
+
+# expand a window by moving one of its side outward
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its side inward
+super + alt + ctrl + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+super + shift + {h,j,k,l}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+
+
+###########################################
+####           multimedia keys         ####
+###########################################
+XF86AudioRaiseVolume
+	pamixer -i 5
+XF86AudioLowerVolume
+    pamixer -d 5
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+XF86AudioMicMute
+	pactl set-source-mute @DEFAULT_SOURCE@ toggle
+XF86MonBrightnessUp
+	light -A 5
+XF86MonBrightnessDown
+	light -U 5
+XF86AudioPlay
+	playerctl play-pause
+XF86AudioNext
+	playerctl next
+XF86AudioPrev
+	playerctl previous
+XF86AudioStop
+	playerctl stop

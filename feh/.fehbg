@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-scale '/home/sadnessits/.local/share/wallpapers/bg.jpg' 
+feh --no-fehbg --bg-scale '/home/sadnessits/.local/share/wallpapers/bg_space.jpg' 

@@ -67,7 +67,16 @@ window#waybar.solo #workspaces button {
   color: @peach;
 }
 
-#custom-layout {
+#custom-language {
+  margin: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 7px;
+  background-color: @bg-custom;
+  color: @font-custom;
+}
+
+#language {
   margin: 5px;
   padding-left: 10px;
   padding-right: 10px;
