@@ -2,7 +2,7 @@
 
 $HOME/.fehbg &
 nm-applet &
-#picom &
+picom -b
 polybar top &
 polybar bottom &
 xmousepasteblock &
