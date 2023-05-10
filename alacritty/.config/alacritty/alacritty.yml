@@ -46,7 +46,7 @@ colors:
 
 window:
   padding:
-   x: 15
-   y: 15
+   x: 20
+   y: 20
   opacity: 0.8
 
