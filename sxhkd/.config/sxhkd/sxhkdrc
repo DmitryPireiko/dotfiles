@@ -9,7 +9,7 @@ super + d
 	$HOME/.config/rofi/launchers/type-2/launcher.sh
 
 super + {_,shift + }Return
-	{kitty, bspc node -s biggest.local}
+	{alacritty, bspc node -s biggest.local}
 
 Print
 	flameshot gui

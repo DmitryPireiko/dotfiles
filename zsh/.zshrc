@@ -6,7 +6,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="simple"
 
 # SSH fix for kitty
-[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
+#[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 
 plugins=(git)
 
