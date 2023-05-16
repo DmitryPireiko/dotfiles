@@ -21,6 +21,9 @@ let NERDTreeShowHidden=1
 "Auto format
 let g:rustfmt_autosave = 1
 
+"Shared clipboard
+set clipboard+=unnamedplus
+
 "Swithing between the windows
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
