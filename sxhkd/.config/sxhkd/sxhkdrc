@@ -21,7 +21,7 @@ super + F2
         telegram-desktop
 
 super + F3
-        element-desktop
+        doublecmd
 
 super + F4
         firefox

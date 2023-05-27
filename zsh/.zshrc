@@ -12,6 +12,15 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+# Temp aliases
+if [ ! -f $BIN/zshaliases.sh ]; then
+    touch $BIN/zshaliases.sh
+    chmod +x $BIN/zshaliases.sh
+    echo "#!/bin/zsh" > $BIN/zshaliases.sh
+fi
+
+source $BIN/zshaliases.sh
+
 # Aliases
 alias scss='sass --watch \#source/scss:css'
 alias v='nvim'
@@ -19,3 +28,4 @@ alias rg='ranger'
 alias po='poweroff'
 alias re='reboot'
 alias ss='systemctl suspend'
+alias aliases='$EDITOR $HOME/.local/bin/zshaliases.sh'
