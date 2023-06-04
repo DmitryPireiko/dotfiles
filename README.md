@@ -3,7 +3,6 @@
 |              | Description                          |
 |--------------|--------------------------------------|
 | OS           | Archlinux                            |
-| WM           | BSPWM                                |
 | Terminal     | Alacritty                            |
 | File manager | ranger                               |
 | App launcher | rofi                                 |
@@ -15,7 +14,9 @@
 
 ## Screenshot
 
+<img src="https://github.com/sadnessITS/files/blob/master/dotfiles/screenshots/sway_1.png">
 <img src="https://github.com/sadnessITS/files/blob/master/dotfiles/screenshots/bspwm_2.png">
+<img src="https://github.com/sadnessITS/files/blob/master/dotfiles/screenshots/dwm_1.png">
 
 ## WARNING!!!
 

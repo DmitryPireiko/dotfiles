@@ -98,15 +98,15 @@ super + {o,i}
 
 # select workspace / move window to workspace
 super + {_,shift + }{1-8}
-	bspc {desktop -f,node -d} '^{1-7}'
+	bspc {desktop -f,node -d} '^{1-6}'
 super + {_,shift + }{w}
-	bspc {desktop -f,node -d} '^{8}'
+	bspc {desktop -f,node -d} '^{7}'
 super + {_,shift + }{r}
-	bspc {desktop -f,node -d} '^{9}'
+	bspc {desktop -f,node -d} '^{8}'
 super + {_,shift + }{s}
+	bspc {desktop -f,node -d} '^{9}'
+super + {_,shift + }{y}
 	bspc {desktop -f,node -d} '^{10}'
-
-
 
 ###########################################
 ####            preselect              ####

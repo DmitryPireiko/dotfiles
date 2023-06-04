@@ -4,7 +4,8 @@
 xsetroot -cursor_name left_ptr
 
 # set workspaces
-bspc monitor -d 1 2 3 4 5 6 7 8 9 0
+bspc monitor DP-4 -d 1 2 3 4 5 6 7 8 9
+bspc monitor HDMI-0 -d 0
 
 # gaps
 bspc config border_width         1
@@ -33,10 +34,13 @@ bspc config gapless_monocle      false
 bspc config paddingless_monocle	 true
 
 # window rules
-bspc rule -a firefox follow=off desktop='^9'
+bspc rule -a firefox follow=off desktop='^8'
 bspc rule -a discord follow=off desktop='^3'
-bspc rule -a TelegramDesktop state=floating follow=off desktop='^8'
+bspc rule -a TelegramDesktop state=floating follow=off desktop='^7'
 #bspc rule -a TelegramDesktop state=floating follow=off rectangle=500x930+90+90 desktop='^8'
-bspc rule -a Steam state=floating follow=off rectangle=1350x900+285+90 desktop='^10' 
+bspc rule -a Steam state=floating follow=off rectangle=1350x900+285+90 desktop='^9' 
 bspc rule -a mpv state=floating rectangle=800x450+560+315 follow=off
 bspc rule -a ru-turikhay-tlauncher-bootstrap-Bootstrap state=floating follow=off desktop='^3'
+
+# steam games
+bspc rule -a steam_app_220440 state=floating follow=off

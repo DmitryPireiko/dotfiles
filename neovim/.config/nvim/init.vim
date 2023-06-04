@@ -6,7 +6,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'kien/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'rust-lang/rust.vim'
-Plug 'mhartington/formatter.nvim'
 "Colorschemes
 Plug 'NLKNguyen/papercolor-theme'
 
@@ -16,9 +15,6 @@ call plug#end()
 let g:mapleader = ','
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
-
-"Auto format
-let g:rustfmt_autosave = 1
 
 "Shared clipboard
 set clipboard+=unnamedplus
@@ -39,23 +35,8 @@ let g:airline_section_z = "\ue0a1:%l/%L Col:%c"
 let g:Powerline_symbols='unicode' 
 let g:airline#extensions#xkblayout#enabled = 0 
 
-"autopep8
-au FileType python setlocal formatprg=autopep8\ -
-
 "Clipboard
 set clipboard+=unnamedplus
-
-"Copy to clipboard
-vnoremap  <leader>y  "+y
-nnoremap  <leader>Y  "+yg_
-nnoremap  <leader>y  "+y
-nnoremap  <leader>yy  "+yy
-
-"Paste from clipboard
-nnoremap <leader>p "+p
-nnoremap <leader>P "+P
-vnoremap <leader>p "+p
-vnoremap <leader>P "+P
 
 "Tabulations
 set expandtab

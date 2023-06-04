@@ -40,7 +40,7 @@
     "format": "<span foreground='#89b4fa'></span>  {usage}%"
   },
   "memory": {
-    "format": "<span foreground='#f5e0dc'> </span> {}%",
+    "format": "<span foreground='#f5e0dc'> </span> {}%",
     "on-click": "kitty htop"
   },
   "temperature": {
@@ -76,7 +76,7 @@
   "pulseaudio": {
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "format": "<span size='13000' foreground='#fab387'></span>  {volume}%",
-    "format-muted": "<span size='13000' foreground='#ff4c5b'></span>",
+    "format-muted": "<span size='13000' foreground='#ff4c5b'></span>",
     "format-icons": {
       "headphone": "",
       "hands-free": "",
