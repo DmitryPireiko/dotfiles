@@ -1,15 +1,18 @@
 #!/bin/sh
 
 $HOME/.fehbg &
-nm-applet &
+$HOME/.local/bin/dwm-bar
+dunst &
+#nm-applet &
 picom -b
-polybar top &
-polybar bottom &
+#polybar top &
+#polybar bottom &
 xmousepasteblock &
 flameshot &
 #$HOME/Build/dwm/sbar.sh &
-easyeffects --gapplication-service &
+#easyeffects --gapplication-service &
 light -S 90
 
 exec sxhkd &
-exec bspwm
+#exec bspwm
+exec dwm

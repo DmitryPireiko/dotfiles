@@ -1,0 +1,77 @@
+#!/usr/bin/env bash
+#
+# Description: Configure volume level and show notification using dunst
+# Usage:
+#     ./control-volume.sh up
+#     ./control-volume.sh down
+#     ./control-volume.sh mute
+#     ./control-volume.sh mic-mute
+# Dependencies: pamixer, dunst
+#
+#iconSound="audio-volume-high"
+#iconMuted="audio-volume-muted"
+#iconMicOff="mic-off.svg"
+#iconMicOn="mic-on.svg"
+iconSound="/usr/share/icons/Papirus-Dark/22x22/actions/audio-volume-high.svg"
+iconMuted="/usr/share/icons/Papirus-Dark/22x22/actions/audio-volume-muted.svg"
+iconMicOff="/usr/share/icons/Papirus-Dark/22x22/panel/mic-off.svg"
+iconMicOn="/usr/share/icons/Papirus-Dark/22x22/panel/mic-on.svg"
+
+function get_volume {
+  pamixer --get-volume
+}
+
+function get_vol_status {
+  pamixer --get-mute
+}
+
+function get_mic_status {
+  pamixer --default-source --get-mute
+}
+
+function send_notification {
+    case "$1" in
+    "up" | "down")
+        dunstify -i $iconSound -r 2593 -u normal -h int:value:"$2" "$2%"
+        ;;
+    "mute")
+        if [ "$(get_vol_status)" = "true" ]
+        then
+            dunstify -i $iconMuted -r 2593 -u normal "Volume muted..."
+        elif [ "$(get_mic_status)" = "false" ]
+        then
+            dunstify -i $iconSound -r 2593 -u normal "Volume unmuted..."
+        fi
+        ;;
+    "mic-mute")
+        if [ "$(get_mic_status)" = "true" ]
+        then
+            dunstify -i $iconMicOff -r 2593 -u normal "Microphone muted..."
+        elif [ "$(get_mic_status)" = "false" ]
+        then
+            dunstify -i $iconMicOn -r 2593 -u normal "Microphone unmuted..."
+        fi
+        ;;
+    esac
+}
+
+case $1 in
+  up)
+    pamixer --unmute
+    pamixer --increase 5
+    send_notification "up" "$(get_volume)"
+    ;;
+  down)
+    pamixer --unmute
+    pamixer --decrease 5
+    send_notification "down" "$(get_volume)"
+    ;;
+  mute)
+    pamixer --toggle-mute
+    send_notification "mute"
+    ;;
+  mic-mute)
+    pamixer --default-source --toggle-mute
+    send_notification "mic-mute"
+    ;;
+esac

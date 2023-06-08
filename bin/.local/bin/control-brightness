@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+#
+# Description: Configure brightness level and show notification using dunst
+# Usage:
+#     Increase brightness: ./control-brightness.sh up
+#     Decrease brightness: ./control-brightness.sh down
+# Dependencies: light
+#
+#icon="xfpm-brightness-lcd.svg"
+icon="/usr/share/icons/Papirus-Dark/22x22/panel/xfpm-brightness-lcd.svg"
+light -N 15.00
+
+function get_brightness {
+  light -G
+}
+
+function send_notification {
+  dunstify -i "$icon" -r 5555 -u normal -h int:value:"$1" "$1%"
+}
+
+case $1 in
+  up)
+    light -A 5.00
+    send_notification "$(get_brightness)"
+    ;;
+  down)
+    light -U 5.00
+    send_notification "$(get_brightness)"
+    ;;
+esac

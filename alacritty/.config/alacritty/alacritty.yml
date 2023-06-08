@@ -15,7 +15,7 @@ font:
     family: JetBrains Mono
     style: Bold Italic
 
-  size: 10
+  size: 7
 
 colors:
   primary:
@@ -46,7 +46,7 @@ colors:
 
 window:
   padding:
-   x: 20
-   y: 20
+   x: 10
+   y: 10
   opacity: 0.8
 
