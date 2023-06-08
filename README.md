@@ -18,11 +18,5 @@ Script `install` overwrites existing files!
 
 ## Screenshot
 
-### Hyprland
-<img src="https://github.com/sadnessITS/files/blob/master/dotfiles/screenshots/sway_1.png">
-
-### BSPWM
-<img src="https://github.com/sadnessITS/files/blob/master/dotfiles/screenshots/bspwm_2.png">
-
 ### DWM
-<img src="https://github.com/sadnessITS/files/blob/master/dotfiles/screenshots/dwm_1.png">
+<img src="https://github.com/sadnessITS/files/blob/master/dotfiles/screenshots/dwm_2.png">
