@@ -38,7 +38,7 @@ function send_notification {
         if [ "$(get_vol_status)" = "true" ]
         then
             dunstify -i $iconMuted -r 2593 -u normal "Volume muted..."
-        elif [ "$(get_mic_status)" = "false" ]
+        elif [ "$(get_vol_status)" = "false" ]
         then
             dunstify -i $iconSound -r 2593 -u normal "Volume unmuted..."
         fi
