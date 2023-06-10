@@ -6,11 +6,15 @@ while true; do
   sleep 2
 done &
 
-volumeicon &
+gxkb &
 
-cbatticon \
+(sleep .5; volumeicon) &
+
+(sleep 1; cbatticon \
   --low-level 45 \
   --critical-level 30 \
-  --hide-notification &
+  --hide-notification) &
 
-nm-applet &
+(sleep 1.5; nm-applet) &
+
+(sleep 2; flameshot) &

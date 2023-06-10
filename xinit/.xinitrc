@@ -8,7 +8,7 @@ picom -b
 #polybar top &
 #polybar bottom &
 xmousepasteblock &
-flameshot &
+#flameshot &
 #$HOME/Build/dwm/sbar.sh &
 #easyeffects --gapplication-service &
 light -S 90
