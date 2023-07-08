@@ -7,11 +7,11 @@
 # Dependencies: light
 #
 #icon="xfpm-brightness-lcd.svg"
-icon="/usr/share/icons/Papirus-Dark/22x22/panel/xfpm-brightness-lcd.svg"
+icon="/usr/share/icons/Papirus-Dark/24x24/panel/xfpm-brightness-lcd.svg"
 light -N 15.00
 
 function get_brightness {
-  light -G
+  light -G | awk '{print substr($0, 0, length($0) - 3)}'
 }
 
 function send_notification {
