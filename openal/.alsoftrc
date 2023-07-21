@@ -1,0 +1,6 @@
+[general]
+drivers = pulse
+stereo-mode=headphones
+hrtf=true
+[pulse]
+allow-moves=yes
