@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#
+# Description: Run Dota 2 after change keyboard layout
+#
+# Dependencies: xkb-switch
+#
+
+gameId=$1
+
+function set_us_layout {
+  xkb-switch -s us
+}
+
+function run_steam_game {
+    steam steam://rungameid/$gameId
+}
+
+set_us_layout
+run_steam_game
