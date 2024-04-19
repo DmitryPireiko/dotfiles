@@ -5,13 +5,13 @@
 }
 
 #window {
-    background: linear-gradient(90deg, rgba(220,20,60,1) 0%, rgba(255,236,236,1) 35%);
+    background: linear-gradient(90deg, rgba(56,183,171, 0.8) 0%, rgba(191, 199, 202, 1) 35%);
     border-radius: 12px;
 }
 
 #outer-box {
     background-color: #000;
-    border-image: linear-gradient(#dc143c, #ffecec) 45;
+    border-image: linear-gradient(#38b7ab, #bfc7ca) 45;
     border-width: 2px;
     border-style: solid;
     border-radius: 2px;
@@ -21,17 +21,17 @@
     margin: 1rem;
     padding: 0.5rem;
     border-radius: 5px;
-    background-color: #413232;
+    background-color: #0d0d0d;
 }
 
 #entry {
     margin: 0.25rem 0.75rem 0.25rem 0.75rem;
     padding: 0.25rem 0.75rem 0.25rem 0.75rem;
-    color: #fff;
+    color: #bfc7ca;
     border-radius: 8px;
 }
 
 #entry:selected {
-    background-color: #dc143c;
-    color: #d9e0ee;
+    background-color: #0ccfd9;
+    color: #0d0d0d;
 }

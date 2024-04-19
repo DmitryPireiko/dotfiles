@@ -1,151 +1,242 @@
-@define-color bg-hover #1A1A28;
-@define-color bg #1E1E2E;
-@define-color blue #89B4FA;
-@define-color sky #89DCEB;
-@define-color red #F38BA8;
-@define-color pink #F5C2E7;
-@define-color lavender #B4BEFE;
-@define-color rosewater #F5E0DC;
-@define-color flamingo #F2CDCD;
-@define-color fg #D9E0EE;
-@define-color green #A6E3A1;
-@define-color dark-fg #161320;
-@define-color peach #FAB387;
-@define-color border @lavender;
-@define-color gray2 #6E6C7E;
-@define-color black4 #575268;
-@define-color black3 #302D41;
-@define-color maroon #EBA0AC;
-@define-color bg-custom #000;
-@define-color font-custom #fff;
-
 * {
-  min-height: 0;
-  margin: 0;
-  padding: 0;
-  border-radius: 0;
-  font-family: "SF Pro", "Ubuntu";
-  font-size: 12pt;
-  padding-bottom: 1px;
-}
-
-tooltip {
-  background: @bg-custom;
-  border-radius: 7px;
-  border: 2px solid @border;
+    border: none;
+    border-radius: 0px;
+    font-family: Ubuntu Nerd Font;
+    font-size: 16px;
+    font-weight: bold;
+    min-height: 25px;
 }
 
 window#waybar {
-  background-color: transparent;
-  color: @font-custom;
+    background-color: #0d0d0d;
+    border-bottom: 0px solid #0d0d0d;
+    color: #94a3ad;
+    transition-property: background-color;
+    transition-duration: .5s;
+    border-radius: 0px;
 }
 
-window#waybar.solo {
-  background-color: @bg-custom;
-  color: @font-custom;
+window#waybar.hidden {
+    opacity: 0;
 }
 
-window#waybar.solo #workspaces button {
-  border-radius: 5px;
+window#waybar.empty #window {
+    background: none;
 }
 
-#custom-arch-pill {
-  margin: 5px;
-  padding-left: 10px;
-  padding-right: 15px;
-  border-radius: 7px;
-  background-color: @font-custom;
-  color: @dark-fg;
+#workspaces button {
+    padding: 2px 10px;
+    margin-right: 5px;
+    background-color: transparent;
+    color: #94a3ad;
+    box-shadow: inset 0px -0px transparent;
+    border-radius: 0px;
 }
 
-#mode {
-  margin: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 7px;
-  background-color: @bg-custom;
-  color: @peach;
+#workspaces button:hover {
+    padding: 2px 10px;
+    margin-right: 5px;
+    background: rgba(191, 199, 202, 0.7);
+    color: #000000;
+    box-shadow: inset 0px -0px #ffffff;
+    outline-style: none;
+    text-shadow: none;
 }
 
-#custom-language {
-  margin: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 7px;
-  background-color: @bg-custom;
-  color: @font-custom;
+#workspaces button.active {
+    padding: 2px 10px;
+    margin-right: 5px;
+    background-color: #bfc7ca;
+    color: #000000;
+    box-shadow: inset 0px -0px #000000;
+    outline-style: none;
+    text-shadow: none;
 }
 
-#language {
-  margin: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 7px;
-  background-color: @bg-custom;
-  color: @font-custom;
+#workspaces button.urgent {
+    padding: 2px 10px;
+    margin-right: 5px;
+    background-color: #38b7ab;
+    color: #ffffff;
+    outline-style: none;
+    text-shadow: none;
 }
 
-#tray {
-  margin: 5px 0 5px 5px;
-  padding-left: 10px;
-  padding-right: 15px;
-  border-radius: 7px 7px 7px 7px;
-  background-color: @bg-custom;
-}
-
-#network {
-  margin: 5px 5px 5px 0;
-  padding-left: 10px;
-  padding-right: 15px;
-  border-radius: 0 7px 7px 0;
-  background-color: @bg-custom;
-  color: @font-custom;
-}
-/* #network.wifi, */
-/* #network.ethernet { */
-/*   color: @green; */
-/* } */
-#network.linked {
-  color: @peach;
-}
-#network.disconnected,
-#network.disabled {
-  color: @red;
-}
-
-#pulseaudio,
+#battery,
 #cpu,
 #memory,
 #temperature,
 #backlight,
-#battery {
-  margin: 5px;
-  padding-left: 10px;
-  padding-right: 15px;
-  border-radius: 7px;
-  color: @font-custom;
-  background-color: @bg-custom;
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#custom-date,
+#custom-usbdrive,
+#custom-maildir,
+#custom-power,
+#custom-emacsd,
+#custom-language,
+#scratchpad,
+#window,
+#mpd,
+#idle_inhibitor {
+    padding: 0px 5px;
+    margin: 4px 5px;
+    color: #bfc7ca;
+    border-radius: 5px
 }
 
-#custom-playerctl {
-  margin: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 7px;
-  color: @font-custom;
-  background-color: @bg-custom;
+#mode {
+    background-color: #ff8f88;
+    color: #ffffff;
+}
+
+#scratchpad {
+    background-color: #bfc7ca;
+    border-radius: 0px;
+    color: #000000;
+    margin: 0px 5px;
+}
+
+#scratchpad.empty {
+    background-color: transparent;
+    border-radius: 0px;
+    color: #94a3ad;
+}
+
+#window {
+    border-radius: 0px;
+    background-color: #bfc7ca;
+    color: #000000;
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0px 5px;
+}
+
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#battery {
+    color: #bfc7ca;
+}
+
+#battery.charging {
+    background-color: #0d0d0d;
+    color: #bfc7ca;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #eee8d5;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: #ff8f88;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: #94a3ad;
+}
+
+#cpu {
+    color: #bfc7ca;
+}
+
+#memory {
+    color: #bfc7ca;
+
+}
+
+#backlight {
+    color: #bfc7ca;
+}
+
+#network {
+    color: #000000;
+}
+
+#network.disconnected {
+    color: #ffffff;
+    background-color: #ff8f88;
+}
+
+#pulseaudio {
+    color: #bfc7ca;
 }
 
 #pulseaudio.muted {
+    color: #94a3ad;
 }
 
-#clock {
-  margin: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 7px;
-  color: @font-custom;
-  background-color: @bg-custom;
+#temperature {
+    color: #bfc7ca;
 }
 
-/* bottom waybar */
+#temperature.critical {
+    color: #bfc7ca;
+    background-color: #0d0d0d;
+}
+
+#tray {
+    background-color: transparent;
+}
+
+#idle_inhibitor {
+    color: #94a3ad;
+}
+
+#idle_inhibitor.activated {
+    color: #000000;
+    margin: 0px 5px;
+    box-shadow: inset 0px 0px #ecF0F1;
+}
+
+#custom-date {
+    color: #bfc7ca;
+}
+
+#custom-usbdrive {
+    color: #000000;
+}
+
+#mpd {
+    color: #000000;
+}
+
+#mpd.stopped {
+    color: #94a3ad;
+}
+
+#custom-power {
+    color: #000000;
+}
+
+#custom-emacsd {
+    color: #000000;
+}
+
+#custom-maildir {
+    color: #94a3ad;
+}
+
+
+#custom-maildir.newmail {
+    color: #07a6c5;
+}
+
