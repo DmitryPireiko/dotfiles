@@ -1,4 +1,5 @@
 require('plugins/install')
+require('plugins/import-configs')
 require('settings') 
 require('keys/global')
 require('keys/plugins')
