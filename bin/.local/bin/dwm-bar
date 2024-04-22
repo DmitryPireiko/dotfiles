@@ -8,13 +8,13 @@ done &
 
 gxkb &
 
-(sleep .5; volumeicon) &
-
-(sleep 1; cbatticon \
+(sleep 0.5; cbatticon \
   --low-level 45 \
   --critical-level 30 \
   --hide-notification) &
 
-(sleep 1.5; nm-applet) &
+(sleep 1; nm-applet) &
 
-(sleep 2; flameshot) &
+(sleep 1.5; flameshot) &
+
+(sleep 2; volumeicon) &

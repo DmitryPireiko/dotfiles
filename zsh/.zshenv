@@ -13,3 +13,6 @@ export AWT_TOOLKIT=MToolkit
 
 # .local/bin to PATH
 [[ "$PATH" == *"$HOME/.local/bin"* ]] || PATH="$HOME/.local/bin:$PATH"
+
+# .NET tools
+export PATH="$PATH:/home/sadnessits/.dotnet/tools"
