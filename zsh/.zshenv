@@ -4,7 +4,7 @@ export XSECURELOCK_COMPOSITE_OBSCURER=0
 export XSECURELOCK_NO_COMPOSITE=1
 export EDITOR='nvim'
 export LD_LIBRARY_PATH=/usr/local/lib
-export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
 export BIN=$HOME/.local/bin
 
 # JAVA fix

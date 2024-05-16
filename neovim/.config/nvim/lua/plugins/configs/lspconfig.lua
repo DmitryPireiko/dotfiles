@@ -35,3 +35,4 @@ lspconfig.omnisharp.setup {
       },
     },
 }
+lspconfig.denols.setup{}
