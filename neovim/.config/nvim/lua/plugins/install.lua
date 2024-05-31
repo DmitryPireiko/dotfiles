@@ -93,4 +93,5 @@ return require('packer').startup(function()
 			require('plugins/lualine')
 		end
 	}
+    use 'mfussenegger/nvim-jdtls'
 end)
